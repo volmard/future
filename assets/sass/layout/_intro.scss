@@ -1,0 +1,78 @@
+/* Intro */
+
+.intro {
+  margin:     0 0 (size(element-margin)-.5);
+  padding:    1.25em 0;
+  text-align: center;
+}
+
+.intro__logo {
+
+  border:   0;
+  display:  inline-block;
+  margin:   0 0 .5em 0;
+  overflow: hidden;
+  position: relative;
+  width:    4em;
+
+  &::before {
+    background-image:    svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="none" zoomAndPan="disable"><polygon points="0,0 100,0 100,25 50,0 0,25" style="fill:#{palette(bkgrnd)}" /><polygon points="0,100 100,100 100,75 50,100 0,75"  style="fill:#{palette(bkgrnd)}" /></svg>');
+    background-position: top left;
+    background-repeat:   no-repeat;
+    background-size:     100% 100%;
+    content:             '';
+    display:             block;
+    height:              100%;
+    left:                0;
+    position:            absolute;
+    top:                 0;
+    width:               100%;
+  }
+
+  img {
+    display:     block;
+    margin-left: -0.25em;
+    width:       4.5em;
+  }
+}
+
+.intro__title {
+  font-size:   1.25em;
+  font-weight: font(weight-heading-extrabold);
+}
+
+.intro__text {
+
+  font-family:    font(family-heading);
+  font-size:      0.7em;
+  font-weight:    font(weight-heading);
+  letter-spacing: font(kerning-heading);
+  line-height:    2.5;
+  margin:         -1em 0 0;
+  text-transform: uppercase;
+}
+
+@include breakpoint(small) {
+  .intro__title {
+    font-size: 2em;
+  }
+
+}
+
+@include breakpoint(medium) {
+  .intro {
+    margin:  0 0 3em;
+    padding: 0;
+  }
+
+}
+
+@include breakpoint(large) {
+  .intro {
+    margin:     0;
+    text-align: left;
+  }
+  .intro__text {
+    font-size: 0.8em;
+  }
+}

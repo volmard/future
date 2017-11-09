@@ -1,0 +1,32 @@
+/*search*/
+
+.search__form {
+  @include icon;
+  position: relative;
+
+  &::before {
+    color:       palette(fg-light);
+    content:     '\f002';
+    left:        0;
+    line-height: size(element-height);
+    position:    absolute;
+    text-align:  center;
+    top:         0;
+    width:       2.5em;
+  }
+}
+
+.search__form input:first-child {
+  @include form();
+  display: block;
+
+  &:focus {
+    border-color: palette(accent);
+    box-shadow:   inset 0 0 0 1px palette(accent);
+  }
+}
+
+::-webkit-input-placeholder {
+  color:   palette(fg-light);
+  opacity: 1;
+}

@@ -1,0 +1,42 @@
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/skel';
+
+	@include skel-breakpoints((
+		xlarge: '(min-width: 1680px)',
+		large: '(min-width: 1280px)',
+		medium: '(min-width: 980px)',
+		small: '(min-width: 736px)',
+		msmall: '(min-width: 481px)',
+		xsmall: '(max-width: 480px)'
+	));
+
+	@include skel-layout((
+		reset: 'full',
+		boxModel: 'border'
+	));
+
+// Base.
+@import 'fonts/font-awesome.scss';
+@import 'fonts/google-fonts.scss';
+@import 'base/page';
+@import 'base/typography';
+
+// Component.
+@import 'components/search';
+@import 'components/user-block';
+@import 'components/post';
+@import 'components/mini-posts';
+@import 'components/posts-list';
+@import 'components/about';
+
+// Layout.
+
+@import 'layout/header';
+@import 'layout/popup-menu';
+@import 'layout/wrapper';
+@import 'layout/main';
+@import 'layout/intro';
+@import 'layout/pagination';
+@import 'layout/footer';

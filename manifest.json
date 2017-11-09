@@ -1,0 +1,25 @@
+{
+  "short_name": "future",
+  "name": "future",
+  "icons": [
+    {
+      "src": "img/*-icon-1x.jpg",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "img/*-icon-2x.jpg",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "img/*-icon-4x.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#23507a",
+  "display": "standalone",
+  "theme_color": "#23507a"
+}

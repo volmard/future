@@ -1,0 +1,70 @@
+/* wrapper */
+
+.header {
+  grid-area: header;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+.main {
+  grid-area: main;
+}
+
+.mini-posts {
+  grid-area: posts;
+}
+
+.posts-list {
+  grid-area: post-list;
+}
+
+.about {
+  grid-area: about;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.wrapper {
+  //	@include testShadow;
+  //	> * {@include testShadow;}
+
+  align-items:           start;
+  display:               grid;
+  grid-gap:              0 3em;
+  grid-template-areas:   "header header" "intro intro" "main main" "posts posts" "post-list post-list" "about about" "footer footer";
+  grid-template-columns: .285fr .715fr;
+  margin:                0 auto;
+  max-width:             100%;
+  opacity:               1;
+  padding:               size(section-spacing-small);
+  transition:            opacity duration(menu) ease;
+  width:                 90em;
+
+  body.is-menu-visible & {
+    opacity: 0.15;
+  }
+
+  @include breakpoint(medium) {
+
+    padding: size(section-spacing);
+
+  }
+
+  @include breakpoint(large) {
+
+    grid-template-areas: "header     header" "intro      main" "posts      main" "post-list  main" "about      main" "footer     main" ".          main";
+  }
+
+  @include breakpoint(large) {
+
+  }
+
+  @include breakpoint(xlarge) {
+    padding: (size(section-spacing) * 1.5);
+  }
+
+}

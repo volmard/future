@@ -1,0 +1,61 @@
+/* Footer */
+
+.footer {
+  border-top: solid 1px palette(border);
+  margin:     size(section-spacing) 0 0 0;
+  padding:    size(section-spacing) 0 0 0;
+}
+
+.footer__social-btns {
+  color:       palette(fg-light);
+  cursor:      default;
+  line-height: 1;
+  list-style:  none;
+  margin:      0;
+  padding:     0;
+}
+
+.footer__social-btn {
+  display: inline-block;
+  margin:  0 .5em 0 0;
+  padding: 0 1em 0 0;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  a {
+    @include icon;
+    border:  0;
+    display: block;
+  }
+}
+
+.footer__social-btn.\--twitter a {
+  &::before {
+    content: '\f099';
+  }
+}
+
+.footer__social-btn.\--fb a {
+  &::before {
+    content: '\f09a';
+  }
+}
+
+.footer__social-btn.\--inst a {
+  &::before {
+    content: '\f16d';
+  }
+}
+
+.footer__copyright {
+  color:          palette(fg-light);
+  display:        block;
+  font-family:    font(family-heading);
+  font-size:      0.5em;
+  font-weight:    font(weight-heading);
+  letter-spacing: font(kerning-heading);
+  margin:         3em 0 0;
+  text-transform: uppercase;
+}

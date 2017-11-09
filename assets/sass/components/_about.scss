@@ -1,0 +1,45 @@
+/*about*/
+
+.about {
+  border-top: solid 1px palette(border);
+  margin:     size(section-spacing) 0 0 0;
+  padding:    size(section-spacing) 0 0 0;
+}
+
+.about__title {
+  font-size: 0.8em;
+  margin:    0 0 (size(element-margin) * 0.75) 0;
+}
+
+.about h2 {
+  font-size: 0.8em;
+  margin:    0 0 1.5em 0;
+}
+
+.about__text {
+  font-size: .9em;
+  margin:    0 0 2em 0;
+}
+
+.about__btn {
+  @include btn(inline-block);
+  transition:     background-color duration(transition) ease, box-shadow duration(transition) ease, color duration(transition) ease;
+  color:          palette(fg-bold);
+  font-family:    font(family-heading);
+  font-size:      0.7em;
+  font-weight:    font(weight-heading-bold);
+  height:         size(element-height) * 1.75;
+  letter-spacing: font(kerning-heading);
+  line-height:    size(element-height) * 1.75;
+  padding:        0 3em;
+  width:          auto;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px palette(accent);
+    color:      palette(accent);
+
+    &:active {
+      background-color: transparentize(palette(accent), 0.95);
+    }
+  }
+}
